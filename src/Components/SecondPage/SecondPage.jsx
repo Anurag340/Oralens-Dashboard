@@ -12,11 +12,11 @@ const SecondPage = () => {
           <p className='text-6xl px-[5vw] text-white '>Hello Org.name Thanks for Choosing Oralens</p>
           <div className='flex flex-col gap-[2vh] px-[5vw]' >
           <p className='text-lg text-white ' >To move ahead please complete the team selection process in the left.</p>
-          <button className='flex justify-center items-center w-fit  bg-white px-[2vh] rounded-full ' >Proceed <GoArrowRight/></button>
+          <a className='flex justify-center items-center w-fit  bg-white px-[2vh] rounded-full ' >Proceed <GoArrowRight/></a>
           </div>
           <div className='flex text-white px-[5vw]'>
             <p>To bulk import via CSV : </p>
-            <button className='bg-white w-fit px-[1vh] mx-[1vh] rounded-xl text-black' >Click here</button>
+            <a className='bg-white w-fit px-[1vh] mx-[1vh] rounded-xl text-black' >Click here</a>
           </div>
         </div>
 

@@ -6,8 +6,8 @@ const TeamList = () => {
     <div className='w-full h-[5vh] min-h-[5vh] text-zinc-200 flex justify-between items-center' >
         <div className='h-full w-[90%] bg-blue-600 flex justify-around items-center rounded-md '>
             <GrGroup/>
-            <span>Department - {}</span>
-            <span>Unit - {}</span>
+            <p>Department - {}</p>
+            <p>Unit - {}</p>
         </div>
         <input className='' type="checkbox" />
     </div>
