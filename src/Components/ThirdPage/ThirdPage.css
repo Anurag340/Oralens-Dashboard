@@ -1,0 +1,40 @@
+@media only screen and (max-width: 500px) {
+    .herotext{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+    .sideediv{
+        width: 0%;
+    }
+    .clickhere{
+        position: absolute;
+        bottom: 20%;
+        left: 10%;
+    }
+    .maindiv{
+        width: 80%;
+        padding-left: 3%;
+    }
+    .formidiv{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    .clickherebutton{
+        width: 30%;
+    }
+    .registerbutton{
+        width: 30%;
+    }
+    .ageinput{
+        width: 20%;
+    }
+    .bldinput{
+        width: 20%;
+    }
+    .lining{
+        width:80%;
+    }
+
+}

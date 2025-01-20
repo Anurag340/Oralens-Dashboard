@@ -1,0 +1,75 @@
+/* Mobile devices (max-width: 600px) */
+@media only screen and (max-width: 500px) {
+    /* Add your mobile styles here */
+    .herotext{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+    .formdiv{
+        width: 100%;
+    }
+
+    .formy{
+        width: 85%;
+        height: 85%;
+    }
+
+    .box{
+        width:80%;
+    }
+    .inputs{
+        width:80%;
+    }
+    .brand{
+        font-size: 1rem;
+    }
+
+    .info{
+        font-size: 1rem;
+    }
+    /* ...other mobile styles... */
+}
+
+@media only screen and (max-height: 700px) {
+    /* Add your mobile styles here */
+    .herotext{
+        display: none;
+    }
+    .bar{
+        display: none;
+    }
+    .formdiv{
+        width: 100%;
+    }
+
+    .box{
+        width:80%;
+        height: 90%;
+    }
+    .inputs{
+        width:80%;
+    }
+    p{
+        font-size: .8rem;
+    }
+    span{
+        font-size: .8rem;
+    }
+    .inputs{
+        font-size: .8rem;
+    }
+    button{
+        font-size: .8rem;
+    }
+
+    .formy{
+        height: 85%;
+        width: 85%;
+    }
+
+    /* ...other mobile styles... */
+}
+
+

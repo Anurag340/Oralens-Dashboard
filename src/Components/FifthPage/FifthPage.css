@@ -1,0 +1,17 @@
+@media only screen and (max-width: 500px) {
+    .bothdiv{
+        width: 100%;
+    }
+    .innerdiv{
+        width: 70%;
+        font-size: .8rem;
+    }
+    .uploadimgbutton{
+        width: 40%;
+        font-size: .8rem;
+    }
+    .imginput{
+        width: 30%;
+    }
+
+}

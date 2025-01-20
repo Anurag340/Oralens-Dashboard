@@ -1,0 +1,6 @@
+@media only screen and (max-width: 500px) {
+    .importlist{
+        height:6vh;
+        min-height: 6vh;
+    }
+}
