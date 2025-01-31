@@ -17,6 +17,12 @@ If not, install the below packages:
 
 npm i react-router-dom
 
+npm i react-icons
+
 npm install -D tailwindcss
 npx tailwindcss init
+
+
+To run
+npm run dev
 
