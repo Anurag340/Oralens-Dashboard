@@ -13,7 +13,7 @@ const FourthPage = () => {
         <div className=' buttonelem flex flex-col gap-[2vw] justify-center items-center '>
             <div className=' importdiv flex gap-[1vw] text-white justify-center items-center '>
                 <p>Choose your file : </p>
-                <input className=' importfile rounded-xl w-[6.5vw] h-[1.8vw] ' type="file" />
+                <input className=' importfile text-xs w-fit h-fit ' type="file" />
             </div>
             <button className='w-[6vw] importbutton rounded-lg bg-white text-black flex justify-center items-center gap-[1vh] '>Import<CiImport/></button>
         </div>

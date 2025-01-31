@@ -48,10 +48,10 @@ const Fifth = () => {
         <div className='flex flex-col justify-center items-center gap-[1vw] '>
           <p>Upload Image</p>
           <div className='flex justify-center items-center gap-[1vh]'>
-            <BsFillCameraFill  className='icons' size={30} />
+            <BsFillCameraFill  className='icons' size={25} />
             <div className='h-[2.3vw] w-[1px] bg-zinc-300 '></div>
-            <GrGallery  className='icons' size={30} />
-            <input type="file" className=' imginput bg-blue-600 w-[6.5vw]' />
+            <GrGallery  className='icons' size={25} />
+            <input type="file" className=' imginput  w-[11vw] text-xs' />
           </div>
         </div>
 
