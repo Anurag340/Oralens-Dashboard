@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Back from '../Back/Back'
 import { useNavigate } from 'react-router-dom'
 import './ThirdPage.css'
+import axios from 'axios'
 
 const ThirdPage = () => {
     const navigate = useNavigate();
@@ -9,23 +10,30 @@ const ThirdPage = () => {
     const [gender, setGender] = useState('');
     const [age, setAge] = useState('');
     const [bloodGroup, setBloodGroup] = useState('');
-    const [userdata, setuserData] = useState({});
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
 
-        setuserData({
+        const userData ={
             name: name,
             gender: gender,
             age: age,
             bloodGroup: bloodGroup
-        });
+        };
+
+         const response = await axios.post('http://localhost:8080/Dashboard/individual-register',userData);
+
+         if(response.status == 200){
+             alert('Data submitted successfully');
+         }
+         else{
+             alert('Failed to submit data');
+         }
+
         setName('');
         setGender('');
         setAge('');
         setBloodGroup('');
-        console.log(userdata);
-        navigate('/individual-register');
     }
 
     return (

@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Back from '../Back/Back'
 import { BsFillCameraFill } from "react-icons/bs";
 import { GrGallery } from "react-icons/gr";
 import { useNavigate } from 'react-router-dom';
 import './FifthPage.css'
+import axios from 'axios';
 const Fifth = () => {
+  const [indv,setindv] = useState();
+  const [indvdata,setindvdata] = useState({});
+
+  const handleSubmit = (e)=>{
+    axios.get('http://localhost:8080/Dashboard/show-individual-details',{params: {indv}})
+    .then(response =>{
+      setindvdata(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+    setindv('');
+  }
+
+  const handleimg = ()=>{
+    
+  }
+  
   const navigate = useNavigate();
   return (
     <div className=' relative h-screen w-full flex flex-col justify-center items-center gap-[3vh] ' >
       <Back/>
 
-      <div className='flex flex-col justify-center w-fit items-center gap-[2vh]' >
+      <form onSubmit={(e)=>{handleSubmit(e)}} className='flex flex-col justify-center w-fit items-center gap-[2vh]' >
         <p className='text-white' >Enter Individual ID:</p>
-        <input type="text" className='rounded-md bg-blue-600 text-white ' placeholder='  Enter Individual ID' />
+        <input type="text" value={indv} onChange={(e)=>{setindv(e.target.value)}} className='rounded-md bg-blue-600 text-white ' placeholder='  Enter Individual ID' />
         <button className='p-[.2vh] rounded-md bg-white w-full ' >Go</button>
-      </div>
+      </form>
 
       <div className='w-full flex flex-col justify-center items-center gap-[1vw]' >
         <p className='text-white' >Details</p>
@@ -27,24 +46,24 @@ const Fifth = () => {
 
         <div className='flex justify-between items-center w-[40%]' >
           <p>Name - </p>
-          <p>{}</p>
+          <p>{indvdata.name}</p>
         </div>
 
         <div className='flex justify-between items-center w-[40%]' >
           <p>Organisation - </p>
-          <p>{}</p>
+          <p>{indvdata.organisation}</p>
         </div>
 
         <div className='flex justify-between items-center w-[40%]' >
           <p>Department - </p>
-          <p>{}</p>
+          <p>{indvdata.department}</p>
         </div>
 
         </div>
 
         <div className='w-[35%] h-[1px] bg-zinc-300 my-[2vh]' ></div>
 
-        <div className='bg-blue-800 innerdiv rounded-md flex flex-col justify-center items-center gap-[3vh] w-[55%] py-[2vh] ' >
+        <form onSubmit={handleimg} className='bg-blue-800 innerdiv rounded-md flex flex-col justify-center items-center gap-[3vh] w-[55%] py-[2vh] ' >
         <div className='flex flex-col justify-center items-center gap-[1vw] '>
           <p>Upload Image</p>
           <div className='flex justify-center items-center gap-[1vh]'>
@@ -57,7 +76,7 @@ const Fifth = () => {
 
         <button onClick={()=>{navigate('/img-upload')}} className='p-[.2vh] px-[1vh] uploadimgbutton rounded-full bg-white text-black '>Upload Img</button>
 
-        </div>
+        </form>
 
         
 
