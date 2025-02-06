@@ -22,7 +22,17 @@ npm i react-icons
 npm install -D tailwindcss
 npx tailwindcss init
 
+npm i axios
+
 
 To run
 npm run dev
 
+
+axios.get('http://localhost:8080/Dashboard/show-individual-details',{params: {indv}})   -->  FifthPage
+
+axios.post('http://localhost:8080/Dashboard/individual-register',userData)  -->  ThirdPage
+
+axios.get('http://localhost:8080/Dashboard/get-teams', { params: { orgId } })  -->  SecondPage
+axios.post('http://localhost:8080/Dashboard/register-team', {teamId: selectedTeam.id});  -->  Second Page
+axios.post('http://localhost:8080/Dashboard/add-team', { unitNo, department });  -->  SecondPage
